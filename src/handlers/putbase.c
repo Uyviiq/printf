@@ -6,7 +6,7 @@
 /*   By: ael-hamr <ael-hamr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 11:56:10 by ael-hamr          #+#    #+#             */
-/*   Updated: 2026/10/28 10:39:49 by ael-hamr         ###   ########.fr       */
+/*   Updated: 2026/10/28 15:18:12 by ael-hamr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,6 @@ t_status	ft_putnbr_base(t_data *data, unsigned long nbr, char *base)
 		base_len++;
 	if (base_len < 2)
 		return (STATUS_ERROR);
-	if (nbr < 0)
-	{
-		if (print_char(data, '-'))
-			return (STATUS_ERROR);
-		nbr = -nbr;
-	}
 	if (nbr >= base_len)
 	{
 		if (ft_putnbr_base(data, nbr / base_len, base))

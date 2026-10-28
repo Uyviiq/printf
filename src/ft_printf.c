@@ -6,7 +6,7 @@
 /*   By: ael-hamr <ael-hamr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 16:30:58 by ael-hamr          #+#    #+#             */
-/*   Updated: 2026/10/28 10:15:40 by ael-hamr         ###   ########.fr       */
+/*   Updated: 2026/10/28 15:26:48 by ael-hamr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ static t_status	handle_format(t_data *data)
 		return (STATUS_ERROR);
 	if (parse_format(data))
 	{
-		if (print_char(data, '%')
-			|| print_char(data, data->fmt[data->fmt_index - 1]))
+		if (data->fmt[data->fmt_index] == '\0')
+			return (STATUS_ERROR);
+		else if (print_char(data, '%'))
 			return (STATUS_ERROR);
 	}
 	else if (call_handler(data))
