@@ -3,7 +3,7 @@ COMPLIER = cc
 FLAGS  = -Wall -Wextra -Werror
 
 HEADER_PATH = ./include
-SRC = ./src/ft_printf.c ./src/parser.c ./src/printf_utils.c ./src/handlers/handle_string.c
+SRC = ./src/ft_printf.c ./src/parser.c ./src/printf_utils.c ./src/handlers/handle_string.c ./src/handlers/putbase.c ./src/handlers/call_handler.c
 OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
@@ -11,7 +11,7 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 		ar rcs $(NAME) $(OBJ)
 
-src/%.o : src/%.c
+src/%.o : src/%.c include/ft_printf.h
 		$(COMPLIER) $(FLAGS) -I$(HEADER_PATH) -c $< -o $@
 
 clean :

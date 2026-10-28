@@ -1,8 +1,11 @@
-#include "printf.h"
+#include "ft_printf.h"
+#include <unistd.h>
 #include <stdio.h>
+
 
 int main(void)
 {
-    char *name = "aziz";
-    printf("%d\n",ft_printf("hello my name is %s\n",name));
+    close(1);
+    int count = ft_printf("%d",1234);
+    dprintf(2,"count : %d\n",count);
 }
