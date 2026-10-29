@@ -6,7 +6,7 @@
 /*   By: ael-hamr <ael-hamr@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 09:06:51 by ael-hamr          #+#    #+#             */
-/*   Updated: 2026/10/28 10:33:42 by ael-hamr         ###   ########.fr       */
+/*   Updated: 2026/10/29 08:47:42 by ael-hamr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ t_status	print_char(t_data *data, char c);
 t_status	ft_putstr(t_data *data, const char *s);
 t_status	parse_format(t_data *data);
 size_t		ft_strlen(const char *s);
-t_status	handle_address_specifiers(t_data *data);
 t_status	handle_basic_specifiers(t_data *data);
-t_status	print_string(t_data *data);
+t_status	pandle_address_specifiers(t_data *data);
+t_status	hrint_string(t_data *data);
 t_status	ft_putnbr_base(t_data *data, unsigned long nbr, char *base);
 t_status	print_signed(t_data *data, int nbr);
 

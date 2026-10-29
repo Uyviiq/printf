@@ -35,15 +35,18 @@ t_status	handle_address_specifiers(t_data *data)
 		ptr = va_arg(data->args, void *);
 		if (!ptr)
 			return (ft_putstr(data, "(nil)"));
-		if (ft_putstr(data, "0x") || ft_putnbr_base(data, (unsigned long)ptr,
-										"0123456789abcdef"))
+		if (ft_putstr(data, "0x")
+			|| ft_putnbr_base(data, (unsigned long)ptr,
+				"0123456789abcdef"))
 			return (STATUS_ERROR);
 	}
 	else if (data->specifier == SPEC_HEX_LOWER)
-		return (ft_putnbr_base(data, (unsigned long)va_arg(data->args, unsigned int),
-			"0123456789abcdef"));
+		return (ft_putnbr_base(data,
+				(unsigned long)va_arg(data->args, unsigned int),
+				"0123456789abcdef"));
 	else if (data->specifier == SPEC_HEX_UPPER)
-		return (ft_putnbr_base(data, (unsigned long)va_arg(data->args, unsigned int),
-			"0123456789ABCDEF"));
+		return (ft_putnbr_base(data,
+				(unsigned long)va_arg(data->args, unsigned int),
+				"0123456789ABCDEF"));
 	return (STATUS_OK);
 }
