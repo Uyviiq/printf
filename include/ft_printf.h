@@ -52,8 +52,8 @@ t_status	ft_putstr(t_data *data, const char *s);
 t_status	parse_format(t_data *data);
 size_t		ft_strlen(const char *s);
 t_status	handle_basic_specifiers(t_data *data);
-t_status	pandle_address_specifiers(t_data *data);
-t_status	hrint_string(t_data *data);
+t_status	handle_address_specifiers(t_data *data);
+t_status	print_string(t_data *data);
 t_status	ft_putnbr_base(t_data *data, unsigned long nbr, char *base);
 t_status	print_signed(t_data *data, int nbr);
 
